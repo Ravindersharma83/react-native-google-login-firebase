@@ -1,31 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Ravinder",
-      "email": "ravinder@gmail.com"
+      "name": "Ravinder Sharma ",
+      "email": "ravinder@gmail.com",
+      "age": "25",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Nik",
-      "email": "nik@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "Mahi",
-      "email": "mahi@gmail.com"
-    },
-    {
-      "name": "Ram",
-      "email": "Ram@gmail.com",
-      "age": "34",
-      "id": 5
-    },
-    {
-      "name": "Sinchan ",
-      "email": "sinchanrock51@gmail.com",
-      "age": "22",
-      "id": 6
+      "name": "Nik Sharma ",
+      "email": "nik@gmail.com",
+      "age": "25",
+      "id": 2
     }
   ],
   "comments": [

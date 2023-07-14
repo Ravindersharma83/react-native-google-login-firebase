@@ -27,7 +27,7 @@ const TestApi = () => {
         <View>
             {/* <Text style={{textAlign:'center',padding:5,fontSize:16,backgroundColor:'orange'}}>{item.id}</Text>
             <Text style={{textAlign:'center',padding:10,fontSize:14}}>{item.name}</Text> */}
-            <DisplayData user={item}/>
+            <DisplayData user={item} getApiData={getData}/>
         </View>
         }
       />
