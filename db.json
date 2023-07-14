@@ -16,12 +16,6 @@
       "email": "mahi@gmail.com"
     },
     {
-      "name": "Test",
-      "email": "test@gmail.com",
-      "age": "24",
-      "id": 4
-    },
-    {
       "name": "Ram",
       "email": "Ram@gmail.com",
       "age": "34",
@@ -32,12 +26,6 @@
       "email": "sinchanrock51@gmail.com",
       "age": "22",
       "id": 6
-    },
-    {
-      "name": "Demo",
-      "email": "demo@gmail.com",
-      "age": "23",
-      "id": 7
     }
   ],
   "comments": [

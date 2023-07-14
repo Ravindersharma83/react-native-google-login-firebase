@@ -1,5 +1,7 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import {FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
+import DisplayData from './DisplayData';
+
 
 const TestApi = () => {
     const[data,setData] = useState([]);
@@ -13,18 +15,21 @@ const TestApi = () => {
         let result = await fetch(url);
         result = await result.json();
         setData(result);
-
     }
+
   return (
     <View>
       <Text style={{textAlign:'center',padding:10,fontSize:30}}>Display Users</Text>
       {data.length ? 
       <FlatList
         data={data}
-        renderItem={({item})=><View>
-            <Text style={{textAlign:'center',padding:5,fontSize:16,backgroundColor:'orange'}}>{item.id}</Text>
-            <Text style={{textAlign:'center',padding:10,fontSize:14}}>{item.name}</Text>
-        </View>}
+        renderItem={({item})=>
+        <View>
+            {/* <Text style={{textAlign:'center',padding:5,fontSize:16,backgroundColor:'orange'}}>{item.id}</Text>
+            <Text style={{textAlign:'center',padding:10,fontSize:14}}>{item.name}</Text> */}
+            <DisplayData user={item}/>
+        </View>
+        }
       />
       : <Text>No Data Found</Text>}
     </View>
