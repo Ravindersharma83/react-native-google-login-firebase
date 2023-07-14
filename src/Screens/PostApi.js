@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Button, Alert,Pressable } from 'react-native'
 import React, { useState } from 'react'
 
-const PostApi = () => {
+const PostApi = ({navigation}) => {
     const[name,setName] = useState(null);
     const[age,setAge] = useState(null);
     const[email,setEmail] = useState(null);
@@ -55,7 +55,14 @@ const PostApi = () => {
       {emailErr ? <Text style={styles.errMsg}>please enter email</Text> : null}
       <TextInput style={styles.input} value={age} placeholder='Enter Age' onChangeText={(text)=>setAge(text)}/>
       {ageErr ? <Text style={styles.errMsg}>please enter age</Text> : null}
-      <Button title='Save Data' onPress={()=>saveData()}/>
+      <View style={{justifyContent:'center',alignItems:'center'}}>
+      <Pressable style={[styles.button,{backgroundColor:'red'}]} onPress={()=>saveData()}>
+        <Text style={styles.text}>Save Data</Text>
+      </Pressable>
+      <Pressable style={[styles.button,{backgroundColor:'blue'}]} onPress={()=>navigation.navigate('Details')}>
+        <Text style={styles.text}>View Data</Text>
+      </Pressable>
+      </View>
     </View>
   )
 }
@@ -76,4 +83,22 @@ const styles = StyleSheet.create({
         marginBottom:10,
         textTransform:'capitalize'
     },
+    button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 3,
+        borderRadius:10,
+        width:'80%',
+        marginTop:20
+      },
+      text: {
+        fontSize: 16,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: 'white',
+      },
 })
