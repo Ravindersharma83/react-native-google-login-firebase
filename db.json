@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "Ravinder Sharma ",
+      "name": "Ravinder",
       "email": "ravinder@gmail.com",
       "age": "25",
       "id": 1
@@ -11,6 +11,30 @@
       "email": "nik@gmail.com",
       "age": "25",
       "id": 2
+    },
+    {
+      "name": "Rohit ",
+      "email": "Rohit@gmail.com",
+      "age": "32",
+      "id": 3
+    },
+    {
+      "name": "Mahi",
+      "email": "Mahi@gmail.com",
+      "age": "31",
+      "id": 4
+    },
+    {
+      "name": "Dev",
+      "email": "Dev@gmail.com",
+      "age": "27",
+      "id": 5
+    },
+    {
+      "name": "Ishu",
+      "email": "Ishu@gmail.com",
+      "age": "23",
+      "id": 6
     }
   ],
   "comments": [

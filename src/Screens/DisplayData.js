@@ -31,13 +31,13 @@ const DisplayData = ({user,getApiData}) => {
                 <TouchableOpacity style={styles.btn} onPress={()=>deleteUser(user.id)}>
                     <Text style={styles.btnText}>Delete</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.btn,{backgroundColor:'yellow',}]} onPress={()=>updateUser(user)}>
-                    <Text style={[styles.btnText,{color:'black'}]}>Update</Text>
+                <TouchableOpacity style={[styles.btn,{backgroundColor:'orange',}]} onPress={()=>updateUser(user)}>
+                    <Text style={[styles.btnText,{color:'white'}]}>Update</Text>
                 </TouchableOpacity>
             </View>
         </View>
 
-        <Modal visible={showModal} transparent={true}>
+        <Modal visible={showModal} transparent={true} animationType="slide">
             <UserModal setShowModal={setShowModal} user={selectedUser} getApiData={getApiData}/>
         </Modal>
     </View>
@@ -116,7 +116,9 @@ const styles = StyleSheet.create({
         backgroundColor:'red',
         width:60,
         height:30,
-        margin:10
+        margin:10,
+        borderRadius:5,
+        elevation:5
 
     },
     btnText:{

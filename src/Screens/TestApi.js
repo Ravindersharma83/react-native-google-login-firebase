@@ -1,4 +1,4 @@
-import {FlatList, StyleSheet, Text, View } from 'react-native'
+import {FlatList, StyleSheet, Text, View, ScrollView, TextInput } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import DisplayData from './DisplayData';
 
@@ -17,9 +17,17 @@ const TestApi = () => {
         setData(result);
     }
 
+    const searchUser = async(text) =>{
+      const url = `http://192.168.1.151:3000/users?q=${text}`;
+      let result = await fetch(url);
+      result = await result.json();
+      setData(result);
+    }
+
   return (
-    <View>
-      <Text style={{textAlign:'center',padding:10,fontSize:30}}>Display Users</Text>
+    <>
+    <TextInput style={styles.input} placeholder='Search...' onChangeText={(text)=>searchUser(text)}/>
+    <ScrollView>
       {data.length ? 
       <FlatList
         data={data}
@@ -32,10 +40,18 @@ const TestApi = () => {
         }
       />
       : <Text>No Data Found</Text>}
-    </View>
+    </ScrollView>
+    </>
   )
 }
 
 export default TestApi
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  input:{
+    borderColor:'blue',
+    borderWidth:1,
+    margin:20,
+    padding:10,
+},
+})
