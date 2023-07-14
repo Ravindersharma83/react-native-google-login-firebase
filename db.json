@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ravinder",
+      "email": "ravinder@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Nik",
+      "email": "nik@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Mahi",
+      "email": "mahi@gmail.com"
+    },
+    {
+      "name": "Test",
+      "email": "test@gmail.com",
+      "age": "24",
+      "id": 4
+    },
+    {
+      "name": "Ram",
+      "email": "Ram@gmail.com",
+      "age": "34",
+      "id": 5
+    },
+    {
+      "name": "Sinchan ",
+      "email": "sinchanrock51@gmail.com",
+      "age": "22",
+      "id": 6
+    },
+    {
+      "name": "Demo",
+      "email": "demo@gmail.com",
+      "age": "23",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

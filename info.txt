@@ -35,3 +35,12 @@
     - paste type-3 clientId in webClientId from google-services.json file.
 5- Create GoogleSignOut.js file in (/src/config/) and write the code or logic for Google sign out.
 6- After writing the complete code logic . just uninstall the current app and start the server again .
+
+
+
+
+** Adding Json server for Api's implementation **
+- npm install -g json-server
+-
+- get IPv4 address in wired settings (192.168.1.151)
+- run (json-server --host 0.0.0.0 db.json)
